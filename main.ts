@@ -1,1 +1,45 @@
-
+while (true) {
+    console.log("Temperature(F): " + input.temperature(TemperatureUnit.Fahrenheit))
+    if (input.temperature(TemperatureUnit.Fahrenheit) > 160) {
+        light.setBrightness(100)
+        light.setAll(light.rgb(255, 0, 0))
+        pause(300)
+        light.clear()
+        pause(300)
+    } else if (input.temperature(TemperatureUnit.Fahrenheit) > 60) {
+        light.setBrightness(10)
+        light.setPixelColor(0, light.rgb(255, 165, 0))
+        pause(300)
+        light.clear()
+        light.setPixelColor(1, light.rgb(255, 255, 0))
+        pause(300)
+        light.clear()
+        light.setPixelColor(2, light.rgb(50, 238, 50))
+        pause(300)
+        light.clear()
+        light.setPixelColor(3, light.rgb(0, 255, 0))
+        pause(300)
+        light.clear()
+        light.setPixelColor(4, light.rgb(20, 81, 230))
+        pause(300)
+        light.clear()
+        light.setPixelColor(5, light.rgb(0, 255, 255))
+        pause(300)
+        light.clear()
+        light.setPixelColor(6, light.rgb(0, 0, 255))
+        pause(300)
+        light.clear()
+        light.setPixelColor(7, light.rgb(238, 130, 238))
+        pause(300)
+        light.clear()
+        light.setPixelColor(8, light.rgb(255, 105, 180))
+        pause(300)
+        light.clear()
+        light.setPixelColor(9, light.rgb(255, 0, 0))
+        pause(300)
+        light.clear()
+    } else {
+        light.setAll(light.rgb(0, 0, 255))
+    }
+    
+}
